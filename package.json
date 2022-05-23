@@ -1,0 +1,16 @@
+{
+  "name": "d2-backend",
+  "version": "1.0.0",
+  "description": "楽しんだお酒を写真と共に記録するアプリであるd2のバックエンドを管理します。",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*",
+    "deploy": "./node_modules/.bin/serverless deploy",
+    "remove": "./node_modules/.bin/serverless remove",
+    "deploy-prod": "./node_modules/.bin/serverless deploy --stage=prod"
+  },
+  "author": "akirin103",
+  "license": "ISC",
+  "dependencies": {
+    "serverless": "^3.18.1"
+  }
+}

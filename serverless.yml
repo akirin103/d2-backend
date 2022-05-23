@@ -1,0 +1,24 @@
+service: d2
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: ap-northeast-1
+  stage: ${opt:stage, self:custom.defaultStage}
+
+custom:
+  defaultStage: dev
+
+package:
+  patterns:
+    - '!**'
+
+functions:
+  drink:
+    handler: src/handler.handler
+    package:
+      individually: true
+      patterns:
+        - src/handler.js
